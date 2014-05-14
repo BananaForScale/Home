@@ -6,12 +6,6 @@ body {
   margin: 0px;
 }
 
-#searchbox {
-  width:250px;
-  margin:3px;
-  margin-left: 5px;
-}
-
 #results {
   overflow: hidden;
   position: absolute;
