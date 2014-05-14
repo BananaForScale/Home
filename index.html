@@ -10,13 +10,40 @@
         <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet'>
         <title>Banana For Scale</title>
 </head>
-<body style='padding-bottom: 100px;'>
-    <br/>
-    <div class='jumbotron main masthead'>
-        <div class='container text-center'>
-            <h1>Banana For Scale</h1>
-        </div>
-    </div>
+<body>
+  <div id="map" >
   </div>
 </body>
+<script>
+    alpha = "ABCDEFGHIJKLMNOPQRST";
+    function numberToLetter(number) {
+        return alpha.charAt(number);
+    }
+    var TOTAL_WIDTH = $(window).width();
+    var TOTAL_HEIGHT = $(window).height();
+    var MIN_TILE_X = 0;
+    var MAX_TILE_X = alpha.length - 1;
+    var MIN_TILE_Y = 1;
+    var MAX_TILE_Y = 20;
+    
+    curry = 1;
+    while (curry <= MAX_TILE_Y) {
+      $('#map').append("<div>");
+      currx = 0;
+      while (currx <= MAX_TILE_X) {
+          tile = numberToLetter(currx) + "_" + pad(curry, 2, '0');
+          $('#map').append("<img onerror=\"fillMissing('" + tile + "')\" id='" + tile + "' width='" + Math.floor(TOTAL_WIDTH / 21) + "px' src='slices/" + tile + ".png" + "'>");
+          currx++;
+      }
+      $('#map').append("</div>");
+      curry++;
+    }
+    function fillMissing(tile) {
+      $('#' + tile).attr('src', 'tiles/img/missing.png');
+    }
+    function pad(n, width, z) {
+      z = z || '0';
+      n = n + '';
+      return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+    }
 </html>
