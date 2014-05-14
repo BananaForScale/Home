@@ -1,6 +1,6 @@
 var MAP_POIs = [
     {'name': 'Port Sebring', 'x': -0.02, 'y': 0.39 },
-    {'name': 'origin', 'x': 0.00, 'y': 0.00 },
+    {'name': 'origin', 'x': -0.02, 'y': 0.39 },
     {'name': 'Acton', 'x': -0.06, 'y': -0.08 },
     {'name': 'Shackleton', 'x': 0.15, 'y': -0.58 },
     {'name': 'Franksburg', 'x': 0.22, 'y': -0.44 },
@@ -14,4 +14,7 @@ var MAP_POIs = [
     {'name': 'Markham', 'x': -0.17, 'y': 0.91 },
     {'name': 'Palmerville', 'x': -0.04, 'y': 1.22 },
     {'name': 'Bransfield', 'x': -0.46, 'y': 1.38 },
+    {'name': 'Lakeborough', 'x': 1.34, 'y': 1.44 },
+    {'name': 'Braggston', 'x': 1.39, 'y': 1.05 },
+    {'name': 'Dounce', 'x': 1.02, 'y': 0.70 },
 ]
