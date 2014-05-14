@@ -8,18 +8,12 @@ extra:
   body:
     css: "style='padding-bottom: 100px; padding-top: 60px;'"
 nav: 'descriptions'
+place:
+  name: Jamora
+  desc: Jamora is the second largest known island on Home.
+  dimmensions:
+    EW: 591
+    NS: 1519
+    AREA: 38373
 ---
-Jamora
-====
-<div class='row'>
-<div class='col-md-6'>
-Jamora is the second largest known island on Home.
-</div>
-<div class='col-md-6'>
-<pre>
-East-to-West: 591 miles
-North-to-South: 1519 mies
-Area: 38373 square miles
-</pre>
-</div>
-</div>
+More info about Jamora

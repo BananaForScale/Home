@@ -1,5 +1,25 @@
 {% include head.html %}
 <div class='container'>
-  {{content}}
+  <h1>{{page.place.name}}</h1>
+  <div class='row'>
+    <div class='col-md-6'>
+      <p class='lead'>{{page.place.desc}}</p>
+    </div>
+    <div class='col-md-6'>
+      <pre>
+        East-to-West: {{page.place.dimmensions.EW}} miles
+        North-to-South: {{page.place.dimmensions.NS}} miles
+        Area: {{page.place.dimmensions.AREA}} square miles
+      </pre>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      {{content}}
+    </div>
+    <div class='col-md-6'>
+      <img class='img img-responsive' src='{{site.baseurl}}/descriptions/img/{{page.title}}.jpg'>
+    </div>
+  </div>
 </div>
 {% include foot.html %}
