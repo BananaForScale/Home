@@ -8,6 +8,6 @@ var MAP_POIs = [
     {'name': 'Point Adams', 'x': -0.10, 'y': -1.14 },
     {'name': 'Marshalltoen', 'x': 0.10, 'y': -1.45 },
     {'name': 'Mawsonwick', 'x': 0.77, 'y': -1.17 },
-    {'name': 'The Forks', 'x': 0.97, 'y': -1.32 },
+    {'name': 'The Forks', 'x': 0.99, 'y': -1.35 },
     {'name': 'Sipleby', 'x': 1.45, 'y': -1.09 },
 ]
