@@ -4,6 +4,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
         <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.0/jquery.timeago.min.js"></script>
         <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js'></script>
         <script src='{{site.baseurl}}/js/global.js'></script>
         {% for js in page.extra.js %}
@@ -22,9 +23,9 @@
         }
         #footer {
           opacity:0.8;
-          position: absolute;
+          position: fixed;
           bottom: 5px;
-          left: 5px;
+          right: 5px;
         }
         </style>
 </head>

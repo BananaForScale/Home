@@ -6,7 +6,7 @@ extra:
     left:
       - "<li><a href='/Home/map'>View map</a></li>"
   body:
-    css: "style='padding-bottom: 100px; padding-top: 60px;'"
+    css: "style='padding-top: 60px;'"
 nav: 'descriptions'
 place:
   name: Jamora

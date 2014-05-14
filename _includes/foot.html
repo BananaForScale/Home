@@ -1,5 +1,5 @@
-<div class='alert' id='footer'>
-  Generated {{page.date | timeago}}
+<div id='footer'>
+  Generated <abbr class='timeago' title='{{ site.time | date_to_xmlschema }}'>{{ site.time | date: "%B %-d, %Y" }}</div>
 </div>
 </body>
 </html>

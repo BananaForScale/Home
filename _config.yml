@@ -18,4 +18,3 @@ markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 name: Home
 pygments: true
-gems: [jekyll-timeago]
