@@ -10,4 +10,8 @@ var MAP_POIs = [
     {'name': 'Mawsonwick', 'x': 0.77, 'y': -1.17 },
     {'name': 'The Forks', 'x': 0.99, 'y': -1.35 },
     {'name': 'Sipleby', 'x': 1.45, 'y': -1.09 },
+    {'name': 'Nareston', 'x': -0.03, 'y': 0.83 },
+    {'name': 'Markham', 'x': -0.17, 'y': 0.91 },
+    {'name': 'Palmerville', 'x': -0.04, 'y': 1.22 },
+    {'name': 'Bransfield', 'x': -0.46, 'y': 1.38 },
 ]
