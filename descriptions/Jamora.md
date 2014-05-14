@@ -9,7 +9,7 @@ extra:
     css: "style='padding-bottom: 100px; padding-top: 60px;'"
 nav: 'descriptions'
 ---
-Stos
+Jamora
 ====
 <div class='row'>
 <div class='col-md-6'>
