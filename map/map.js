@@ -17,8 +17,8 @@ var RESOLUTIONS = [0, 225, 450, 1100];
 var THUMB_HANDOFF = 5000;
 var MAX_DOWNLOADS = 3;
 
-var ORIGIN_X = 0.0;
-var ORIGIN_Y = 0.0;
+var ORIGIN_X = -0.02;
+var ORIGIN_Y = 0.39;
 
 var currx = ORIGIN_X;
 var curry = ORIGIN_Y;
@@ -169,7 +169,7 @@ function processAnchor(animate) {
     if (s == 'origin') {
         var x = ORIGIN_X;
         var y = ORIGIN_Y;
-        var ZOOZOO = 2.99;
+        var ZOOZOO = ZOOM_MIN;
     } else {
         var i = s.indexOf(',');
         if (i < 0) {
