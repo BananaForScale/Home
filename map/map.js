@@ -166,55 +166,64 @@ function processAnchor(animate) {
     if (!window.location.hash)
         return;
     var s = window.location.hash.substr(1);
-    var i = s.indexOf(',');
-    if (i < 0) {
-        // it is not a coordinate, let's try if it is a point
-        var pointFound = false;
-        for (var point in MAP_POIs) {
-            if (s == MAP_POIs[point]['name']) {
-                pointFound = true;
-                var x = MAP_POIs[point]['x'];
-                var y = MAP_POIs[point]['y'];
-                var ZOOZOO = ZOOM_MIN;
-                break;
-            }
-        }
-        if (!pointFound)
-            return;
+    if (s == 'rollplay') {
+        var x = ROLLPLAY_START_X;
+        var y = ROLLPLAY_START_Y;
+        var ZOOZOO = 2.99;
+    } else if (s == 'misscliks') {
+        var x = MISSCLIKS_START_X;
+        var y = MISSCLIKS_START_Y;
+        var ZOOZOO = 2.99;
     } else {
-        var j = s.indexOf(',', i + 1);
-        var ZOOZOO = ZOOM_MIN;
-        if (j >= 0) {
-            var z = parseFloat(s.substring(j + 1, s.length));
-            if (!isNaN(z)) {
-                ZOOZOO = z;
-                if (ZOOZOO < ZOOM_MIN)
-                    ZOOZOO = ZOOM_MIN;
-                if (ZOOZOO > ZOOM_MAX)
-                    ZOOZOO = ZOOM_MAX;
+        var i = s.indexOf(',');
+        if (i < 0) {
+            // it is not a coordinate, let's try if it is a point
+            var pointFound = false;
+            for (var point in MAP_POIs) {
+                if (s == MAP_POIs[point]['name']) {
+                    pointFound = true;
+                    var x = MAP_POIs[point]['x'];
+                    var y = MAP_POIs[point]['y'];
+                    var ZOOZOO = ZOOM_MIN;
+                    break;
+                }
             }
+            if (!pointFound)
+                return;
         } else {
-            j = s.length;
+            var j = s.indexOf(',', i + 1);
+            var ZOOZOO = ZOOM_MIN;
+            if (j >= 0) {
+                var z = parseFloat(s.substring(j + 1, s.length));
+                if (!isNaN(z)) {
+                    ZOOZOO = z;
+                    if (ZOOZOO < ZOOM_MIN)
+                        ZOOZOO = ZOOM_MIN;
+                    if (ZOOZOO > ZOOM_MAX)
+                        ZOOZOO = ZOOM_MAX;
+                }
+            } else {
+                j = s.length;
+            }
+            var x = parseFloat(s.substring(0, i));
+            var y = parseFloat(s.substring(i + 1, j));
+            if (isNaN(x) || isNaN(y))
+                return;
+
         }
-        var x = parseFloat(s.substring(0, i));
-        var y = parseFloat(s.substring(i + 1, j));
-        if (isNaN(x) || isNaN(y))
-            return;
-
     }
-}
 
-// Fix the coordinates, because the center of the center tile is the center of the map
-x += 0.5;
-y += 0.5;
+    // Fix the coordinates, because the center of the center tile is the center of the map
+    x += 0.5;
+    y += 0.5;
 
-if (arguments.length < 1 || animate) {
-    setView(x, y, ZOOZOO);
-} else {
-    currx = x;
-    curry = y;
-    zoomlevel = ZOOZOO;
-}
+    if (arguments.length < 1 || animate) {
+        setView(x, y, ZOOZOO);
+    } else {
+        currx = x;
+        curry = y;
+        zoomlevel = ZOOZOO;
+    }
 }
 window.onhashchange = function () {
     processAnchor(true);
