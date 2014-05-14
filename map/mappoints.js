@@ -17,4 +17,6 @@ var MAP_POIs = [
     {'name': 'Lakeborough', 'x': 1.34, 'y': 1.44 },
     {'name': 'Braggston', 'x': 1.39, 'y': 1.05 },
     {'name': 'Dounce', 'x': 1.02, 'y': 0.70 },
+    {'name': 'Flounders', 'x': 1.38, 'y': 0.20 },
+    {'name': 'Currie Point', 'x': 0.63, 'y': 0.34 },
 ]
