@@ -215,7 +215,7 @@ if (arguments.length < 1 || animate) {
     curry = y;
     zoomlevel = ZOOZOO;
 }
-}
+
 window.onhashchange = function () {
     processAnchor(true);
 }
