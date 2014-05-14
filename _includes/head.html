@@ -39,7 +39,9 @@
     {% for nav in page.extra.nav %}
     {{nav}}
     {% endfor %}
-    {{page.navcontent}}
+    <ul class='nav navbar-nav navbar-right'>
+      <li><a href='{{site.github.repository_url}}'><i class='fa fa-github'></i></a></li>
+    </ul>
     <div style='width: 45px;'></div>
   </div>
   </nav>
