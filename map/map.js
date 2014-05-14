@@ -166,13 +166,9 @@ function processAnchor(animate) {
     if (!window.location.hash)
         return;
     var s = window.location.hash.substr(1);
-    if (s == 'rollplay') {
-        var x = ROLLPLAY_START_X;
-        var y = ROLLPLAY_START_Y;
-        var ZOOZOO = 2.99;
-    } else if (s == 'misscliks') {
-        var x = MISSCLIKS_START_X;
-        var y = MISSCLIKS_START_Y;
+    if (s == 'origin') {
+        var x = ORIGIN_X;
+        var y = ORIGIN_Y;
         var ZOOZOO = 2.99;
     } else {
         var i = s.indexOf(',');
