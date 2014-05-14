@@ -391,8 +391,7 @@ $(document).ready(function () {
 
     $("#searchbox").keyup(function (e) {
         var inputString = document.getElementById("searchbox").value.toLowerCase(); // not sure why $("#searchbox").val() does not work :S
-        if (inputString.length >= 3) {
-            // Only do this when we have at least 3 characters
+        if (inputString.length >= 0) {
             var matchedCities = new Array();
             for (var point in MAP_POIs) {
                 var pointName = MAP_POIs[point]['name'].toString();
