@@ -507,10 +507,10 @@ function displayTile(x, y, r) {
     if (tile.loaded < 0)
         return;
 
-    var link = '/tiles/img/' + x + ',' + y + '.png';
+    var link = '/Home/tiles/img/' + x + ',' + y + '.png';
     var thumblink;
     if (r < RESOLUTIONS.length - 1)
-        thumblink = '/tiles/img/thumb' + RESOLUTIONS[r] + '/' + x + ',' + y + '.jpg';
+        thumblink = '/Home/tiles/img/thumb' + RESOLUTIONS[r] + '/' + x + ',' + y + '.jpg';
     else
         thumblink = link;
 
