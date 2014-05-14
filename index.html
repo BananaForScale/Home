@@ -1,53 +1,18 @@
-<!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-        <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
-        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.0/jquery.timeago.min.js'></script>
-        <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
-        <link href='//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css' rel='stylesheet'>
-        <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet'>
-        <title>Banana For Scale</title>
-</head>
-<body>
-  <div id="map" >
+---
+title: "Home"
+extra:
+  nav:
+    - "<ul class='nav navbar-nav navbar-left'>"
+    - "<li><a href='map'>View map</a></li>"
+    - </ul>
+---
+  {% include head.html %}
+  <br/>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-6'>
+        <p class='lead'>Home is the setting for Banna For Scale's first ever adventure.</p>
+      </div>
+    </div>
   </div>
-</body>
-<script>
-    alpha = "ABCDEFGHIJKLMNOPQRST";
-    var TOTAL_WIDTH = $(window).width();
-    var TOTAL_HEIGHT = $(window).height();
-    var MIN_TILE_X = 0;
-    var MAX_TILE_X = alpha.length - 1;
-    var MIN_TILE_Y = 1;
-    var MAX_TILE_Y = 20;
-
-    $(function () {
-      curry = 1;
-      while (curry <= MAX_TILE_Y) {
-        $('#map').append("<div>");
-        currx = 0;
-        while (currx <= MAX_TILE_X) {
-            tile = numberToLetter(currx) + "_" + pad(curry, 2, '0');
-            $('#map').append("<img onerror=\"fillMissing('" + tile + "')\" id='" + tile + "' width='" + Math.floor(TOTAL_WIDTH / 21) + "px' src='slices/" + tile + ".png" + "'>");
-            currx++;
-        }
-        $('#map').append("</div>");
-        curry++;
-      }
-    });
-
-    function fillMissing(tile) {
-      $('#' + tile).attr('src', 'tiles/img/missing.png');
-    }
-    function pad(n, width, z) {
-      z = z || '0';
-      n = n + '';
-      return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-    }
-    function numberToLetter(number) {
-        return alpha.charAt(number);
-    }
-</script>
-</html>
+{% include foot.html %}
