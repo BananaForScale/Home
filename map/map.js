@@ -376,16 +376,7 @@ function calcDistance(point1, point2) {
     };
 }
 
-function displayHelp() {
-
-}
-
 $(document).ready(function () {
-  $(document).keypress(function(e){
-    if(e.which == 72 || e.which == 104) {
-      displayHelp();
-    }
-  });
     $('#holder').bind('contextmenu', function (e) {
         if (e.ctrlKey) {
             var mouseX = e.pageX - this.offsetLeft;
