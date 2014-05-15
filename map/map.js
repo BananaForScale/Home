@@ -326,51 +326,66 @@ function slideView(xdiff, ydiff) {
 points = [];
 
 function storePoint(tX, tY, currx, curry, zoomlevel) {
-  if (points[0] !== undefined && points[1] !== undefined) {
-    //$.jStorage.set(new Date().toISOString(), points);
-    points = [];
-  }
-  if (points[0] === undefined){
-    points[0] = {'x': tX, 'y': tY};
-  } else if (points[1] === undefined) {
-    points[1] = {'x': tX, 'y': tY};
-    miles1 = {'x': (points[0]['x'] * 1100) * 0.09, 'y': (points[0]['y'] * 1100) * 0.09};
-    miles2 = {'x': (points[1]['x'] * 1100) * 0.09, 'y': (points[1]['y'] * 1100) * 0.09};
-    distance = calcDistance(miles1, miles2);
-    displayDistance(distance, points);
-  }
+    if (points[0] !== undefined && points[1] !== undefined) {
+        //$.jStorage.set(new Date().toISOString(), points);
+        points = [];
+    }
+    if (points[0] === undefined) {
+        points[0] = {
+            'x': tX,
+            'y': tY
+        };
+    } else if (points[1] === undefined) {
+        points[1] = {
+            'x': tX,
+            'y': tY
+        };
+        miles1 = {
+            'x': (points[0]['x'] * 1100) * 0.09,
+            'y': (points[0]['y'] * 1100) * 0.09
+        };
+        miles2 = {
+            'x': (points[1]['x'] * 1100) * 0.09,
+            'y': (points[1]['y'] * 1100) * 0.09
+        };
+        distance = calcDistance(miles1, miles2);
+        displayDistance(distance, points);
+    }
 }
 
 var lastTimeout;
 
 function displayDistance(distance, points) {
-  if (lastTimeout !== undefined) {
-    clearTimeout(lastTimeout);
-  }
-  $('#distance').text(distance['abs'].toFixed(2) + ' miles from ' + points[0]['x'].toFixed(2) + ', ' + points[0]['y'].toFixed(2) + ' to ' + points[1]['x'].toFixed(2) + ', ' + points[1]['y'].toFixed(2));
-  lastTimeout = setTimeout(function(){
-    $('#distance').text('');
-  }, 10000)
+    if (lastTimeout !== undefined) {
+        clearTimeout(lastTimeout);
+    }
+    $('#distance').text(distance['abs'].toFixed(2) + ' miles from ' + points[0]['x'].toFixed(2) + ', ' + points[0]['y'].toFixed(2) + ' to ' + points[1]['x'].toFixed(2) + ', ' + points[1]['y'].toFixed(2));
+    lastTimeout = setTimeout(function () {
+        $('#distance').text('');
+    }, 10000)
 }
 
 function calcDistance(point1, point2) {
-  dx = point1['x'] - point2['x'];
-  dy = point1['y'] - point2['y'];
-  distance = Math.sqrt((Math.pow(dx, 2) + Math.pow(dy, 2)));
-  return {raw: distance, abs: Math.abs(distance)};
+    dx = point1['x'] - point2['x'];
+    dy = point1['y'] - point2['y'];
+    distance = Math.sqrt((Math.pow(dx, 2) + Math.pow(dy, 2)));
+    return {
+        raw: distance,
+        abs: Math.abs(distance)
+    };
 }
 
 $(document).ready(function () {
-  $('#holder').bind('contextmenu', function(e) {
-    if (e.ctrlKey) {
-      var mouseX = e.pageX - this.offsetLeft;
-      var mouseY = e.pageY - this.offsetTop;
-      mouseHeldX = getTileX(mouseX, currx, zoomlevel);
-      mouseHeldY = getTileY(mouseY, curry, zoomlevel);
-      storePoint(mouseHeldX, mouseHeldY, currx, curry, zoomlevel);
-      return false;
-    }
-});
+    $('#holder').bind('contextmenu', function (e) {
+        if (e.ctrlKey) {
+            var mouseX = e.pageX - this.offsetLeft;
+            var mouseY = e.pageY - this.offsetTop;
+            mouseHeldX = getTileX(mouseX, currx, zoomlevel);
+            mouseHeldY = getTileY(mouseY, curry, zoomlevel);
+            storePoint(mouseHeldX, mouseHeldY, currx, curry, zoomlevel);
+            return false;
+        }
+    });
     $('#holder').mousewheel(function (e, delta) {
         // when zooming with the mousewheel we want to zoom towards / away from the cursor
         var mouseX = e.pageX - this.offsetLeft;
