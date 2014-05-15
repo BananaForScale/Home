@@ -19,4 +19,5 @@ var MAP_POIs = [
     {'name': 'Dounce', 'x': 1.02, 'y': 0.70 },
     {'name': 'Flounders', 'x': 1.38, 'y': 0.20 },
     {'name': 'Currie Point', 'x': 0.63, 'y': 0.34 },
+    {'name': 'Ingoton', 'x': 0.39, 'y': 0.43 },
 ]
