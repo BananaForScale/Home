@@ -341,12 +341,12 @@ function storePoint(tX, tY, currx, curry, zoomlevel) {
             'y': tY
         };
         miles1 = {
-            'x': (points[0]['x'] * 1100) * 0.09,
-            'y': (points[0]['y'] * 1100) * 0.09
+            'x': (points[0]['x'] * 1100) * 0.09090909090909090909090909090909,
+            'y': (points[0]['y'] * 1100) * 0.09090909090909090909090909090909
         };
         miles2 = {
-            'x': (points[1]['x'] * 1100) * 0.09,
-            'y': (points[1]['y'] * 1100) * 0.09
+            'x': (points[1]['x'] * 1100) * 0.09090909090909090909090909090909,
+            'y': (points[1]['y'] * 1100) * 0.09090909090909090909090909090909
         };
         distance = calcDistance(miles1, miles2);
         console.log(distance);
@@ -376,7 +376,16 @@ function calcDistance(point1, point2) {
     };
 }
 
+function displayHelp() {
+
+}
+
 $(document).ready(function () {
+  $(document).keypress(function(e){
+    if(e.which == 72 || e.which == 104) {
+      displayHelp();
+    }
+  });
     $('#holder').bind('contextmenu', function (e) {
         if (e.ctrlKey) {
             var mouseX = e.pageX - this.offsetLeft;
