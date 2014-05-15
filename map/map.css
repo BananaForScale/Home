@@ -27,6 +27,16 @@ body {
   left: 5px;
 }
 
+#distance {
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+  opacity:0.8;
+  position: absolute;
+  top: 75px;
+  left: 5px;
+}
+
 #holder {
   position: absolute;
   overflow: hidden;

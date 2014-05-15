@@ -5,6 +5,8 @@ extra:
   js:
     - map.js
     - mappoints.js
+    - '//cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.4/jstorage.min.js'
+    - '//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js'
   nav:
     left:
       - "<form class='navbar-form' role='search' onsubmit='return false;'>"
@@ -16,6 +18,7 @@ extra:
     - "<li><a href='#origin'>Starting town</a></li>"
   prenav:
     - "<span id='coords'></span>"
+    - "<span id='distance'></span>"
 title: "The Map of Home"
 ---
 {% include head.html %}
