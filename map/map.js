@@ -362,7 +362,7 @@ function displayDistance(distance, points) {
     $('#distance').text(distance['abs'].toFixed(2) + ' miles from ' + points[0]['x'].toFixed(2) + ', ' + points[0]['y'].toFixed(2) + ' to ' + points[1]['x'].toFixed(2) + ', ' + points[1]['y'].toFixed(2));
     lastTimeout = setTimeout(function () {
         $('#distance').text('');
-    }, 10000)
+    }, 30000)
 }
 
 function calcDistance(point1, point2) {
