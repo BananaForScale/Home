@@ -8,8 +8,8 @@ extra:
     - '//cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.4/jstorage.min.js'
     - '//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js'
   nav:
-    left:
-      - "<form class='navbar-form' role='search' onsubmit='return false;'>"
+    any:
+      - "<form class='navbar-form navbar-left' role='search' onsubmit='return false;'>"
       - "<div class='form-group'>"
       - "<input id='searchbox' type='text' class='form-control' placeholder='Type the name of a point...'>"
       - "<div id='results'>"
@@ -22,6 +22,11 @@ extra:
 title: "The Map of Home"
 ---
 {% include head.html %}
+  <script>
+    $(function() {
+      $('#nav-view-map').addClass('active');
+    });
+  </script>
   <div id='holder'>
     <div id='base'>
     </div>

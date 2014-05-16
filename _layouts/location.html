@@ -1,4 +1,10 @@
 {% include head.html %}
+<script>
+$(function(){
+  $('#nav-places-{{page.title}}').addClass('active');
+  $('#nav-places').addClass('active');
+});
+</script>
 <div class='container'>
   <h1>{{page.place.name}}</h1>
   <div class='row'>

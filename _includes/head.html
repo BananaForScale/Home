@@ -60,20 +60,24 @@
   </div>
   <div class='collapse navbar-collapse' id='nav-collapse'>
     <ul class='nav navbar-nav navbar-left'>
+      <li id='nav-view-map'><a href='{{site.baseurl}}/map'>View map</a></li>
       {% for nav in page.extra.nav.left %}
       {{nav}}
       {% endfor %}
     </ul>
+    {% for nav in page.extra.nav.any %}
+    {{nav}}
+    {% endfor %}
     <ul class='nav navbar-nav navbar-right'>
       {% for nav in page.extra.nav.right %}
       {{nav}}
       {% endfor %}
-      <li class='dropdown'>
+      <li id='nav-places' class='dropdown'>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Places <b class="caret"></b></a>
         <ul class='dropdown-menu'>
           {% for page in site.pages %}
             {% if page.nav == 'descriptions' %}
-              <li><a href='{{site.baseurl}}{{page.url}}'>{{page.title}}</a></li>
+              <li id='nav-places-{{page.title}}'><a href='{{site.baseurl}}{{page.url}}'>{{page.title}}</a></li>
             {% endif %}
           {% endfor %}
         </ul>

@@ -2,9 +2,6 @@
 layout: location
 title: Jamora
 extra:
-  nav:
-    left:
-      - "<li><a href='/Home/map'>View map</a></li>"
   body:
     css: "style='padding-top: 60px;'"
 nav: 'descriptions'
