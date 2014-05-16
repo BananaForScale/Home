@@ -407,6 +407,8 @@ $(document).ready(function() {
       if (lastTimeout !== undefined) {
         clearTimeout(lastTimeout);
       }
+      polypoints = [];
+      points = [];
       $('#distance').text('');
     }
   });
