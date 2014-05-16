@@ -15,6 +15,7 @@ body {
   margin:0;
   padding:3px;
   display: none;
+  top: 75px;
 }
 
 #coords {
@@ -35,6 +36,12 @@ body {
   position: absolute;
   top: 75px;
   left: 5px;
+}
+
+#helpButton {
+  position: absolute;
+  top: 75px;
+  right: 5px;
 }
 
 #holder {

@@ -9,17 +9,19 @@ extra:
     - '//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js'
   nav:
     any:
-      - "<form class='navbar-form navbar-left' role='search' onsubmit='return false;'>"
-      - "<div class='form-group'>"
-      - "<input id='searchbox' type='text' class='form-control' placeholder='Type the name of a point...'>"
+      - "<form class='navbar-form navbar-left' onsubmit='return false;'>"
+      - "<input id='searchbox' type='text' class='form-control col-lg-8' placeholder='Type the name of a point...'>"
       - "<div id='results'>"
-      - "</div></div></form>"
+      - "</div></form>"
     right:
     - "<li><a href='#origin'>Starting town</a></li>"
+  body:
+    css: "style='background-color: #222222;'"
   prenav:
     - "<span id='coords'></span>"
     - "<span id='distance'></span>"
-title: "The Map of Home"
+    - "<span id='helpButton'><button class='btn btn-primary btn-xs' data-toggle='modal' data-target='#helpModal'>Help</button></span>"
+title: 'The Map of Home'
 ---
 {% include head.html %}
   <script>
@@ -31,4 +33,28 @@ title: "The Map of Home"
     <div id='base'>
     </div>
   </div>
+<div class='modal fade' tabindex='-1' id='helpModal'>
+  <div class='modal-dialog' style='width: 75%;'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+        <h4 class='modal-title'>Map Held</h4>
+      </div>
+      <div class='modal-body'>
+        <div class='row'>
+          <div class='lead page-header'>Distance Utils</div>
+          <div>
+            <p class='lead'>Point to Point</p>
+            <p>Hold <kbd>Ctrl</kbd> and right click to place a point. Distance will hide itslef after 30 seconds. Or hit <kbd>Esc</kbd>.</p>
+            <p class='lead'>Poly line</p>
+            <p>Hold <kbd>Ctrl</kbd> + <kbd>Alt</kbd> and right click to place a point. Hit <kbd>Esc</kbd> to hide the distance.</p>
+          </div>
+        </div>
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 {% include foot.html %}
