@@ -402,7 +402,7 @@ function calcDistance(point1, point2) {
 }
 
 $(document).ready(function() {
-  $(document).keyup(function(e) {
+  $(document).bind('keyup', function(e){
     if (e.keyCode == 27) {
       if (lastTimeout !== undefined) {
         clearTimeout(lastTimeout);
@@ -410,6 +410,7 @@ $(document).ready(function() {
       polypoints = [];
       points = [];
       $('#distance').text('');
+      $("#results").css("display", "none");
     }
   });
   $('#holder').bind('contextmenu', function(e) {
