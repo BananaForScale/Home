@@ -49,7 +49,11 @@ body {
   bottom: 45px;
   right: 5px;
   background-color: white;
-  opacity:0.65;
+  opacity: 0.25;
+}
+
+#compass:hover {
+  opacity: 0.85;
 }
 
 #holder {
