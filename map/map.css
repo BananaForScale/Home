@@ -47,7 +47,7 @@ body {
 #compass {
   position: absolute;
   bottom: 45px;
-  left: 5px;
+  right: 5px;
   background-color: white;
   opacity:0.65;
 }
