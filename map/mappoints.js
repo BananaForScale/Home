@@ -20,4 +20,13 @@ var MAP_POIs = [
     {'name': 'Flounders', 'x': 1.38, 'y': 0.20 },
     {'name': 'Currie Point', 'x': 0.63, 'y': 0.34 },
     {'name': 'Ingoton', 'x': 0.39, 'y': 0.43 },
+    {'name': 'Mossrot', 'x': 2.03, 'y': 1.44 },
+    {'name': 'Spikewort', 'x': 2.37, 'y': 1.26 },
+    {'name': 'The Blackwood', 'x': 2.20, 'y': 0.75 },
+    {'name': 'Flintberg', 'x': 1.88, 'y': 0.34 },
+    {'name': 'The Cryptwood', 'x': 0.64, 'y': 0.73 },
+    {'name': 'Runeedge', 'x': -0.32, 'y': 2.00 },
+    {'name': 'Puddleham', 'x': 0.41, 'y': 1.94 },
+    {'name': 'Shardrose', 'x': 0.97, 'y': 1.88 },
+    {'name': 'Mod\'s Reach', 'x': 2.29, 'y': 2.43 },
 ]
