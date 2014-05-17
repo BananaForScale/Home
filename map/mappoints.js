@@ -29,4 +29,5 @@ var MAP_POIs = [
     {'name': 'Puddleham', 'x': 0.41, 'y': 1.94 },
     {'name': 'Shardrose', 'x': 0.97, 'y': 1.88 },
     {'name': 'Mod\'s Reach', 'x': 2.29, 'y': 2.43 },
+    {'name': 'Thatchspawn', 'x': 2.78, 'y': -1.12 },
 ]
