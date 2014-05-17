@@ -54,6 +54,7 @@ body {
 
 #base {
   position: absolute;
+  background-color: #6dc5dc;
 }
 
 #base a {
