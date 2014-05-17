@@ -21,12 +21,14 @@ extra:
     - "<span id='coords'></span>"
     - "<span id='distance'></span>"
     - "<span id='helpButton'><button class='btn btn-primary btn-xs' data-toggle='modal' data-target='#helpModal'>Help</button></span>"
+    - "<div id='compass' class='img-circle'></div>"
 title: 'The Map of Home'
 ---
 {% include head.html %}
   <script>
     $(function() {
       $('#nav-view-map').addClass('active');
+      $('#compass').html("<img width='150px' src='{{site.baseurl}}/img/compass.png'>");
     });
   </script>
   <div id='holder'>

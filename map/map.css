@@ -44,6 +44,14 @@ body {
   right: 5px;
 }
 
+#compass {
+  position: absolute;
+  bottom: 45px;
+  left: 5px;
+  background-color: white;
+  opacity:0.65;
+}
+
 #holder {
   position: absolute;
   overflow: hidden;
