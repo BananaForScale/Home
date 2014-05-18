@@ -335,11 +335,8 @@ function storePolyPoint(tX, tY) {
     index = 0;
     distance = 0;
     while (index < polypoints.length) {
-      console.log(index + ' : ' + index + 1)
       point1 = polypoints[index];
       point2 = polypoints[index + 1];
-      console.log(point1);
-      console.log(point2);
       if (point2 !== undefined) {
         distance += calcDistance(point1, point2)['abs']
       }
@@ -374,7 +371,6 @@ function storePoint(tX, tY, currx, curry, zoomlevel) {
       'y': (points[1]['y'] * 1100) * 0.09090909090909090909090909090909
     };
     distance = calcDistance(miles1, miles2);
-    console.log(distance);
     displayDistance(distance, points);
   }
 }
