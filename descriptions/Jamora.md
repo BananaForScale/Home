@@ -13,4 +13,4 @@ place:
     NS: 1519
     AREA: 38373
 ---
-More info about Jamora
+Jamora is an uninhabited island. Covered entirely by think jungle, not many have dared explore it. As such, a lot is unknown about it.
