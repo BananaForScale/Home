@@ -3,9 +3,17 @@ title: "Home"
 extra:
   body:
     css: "style='padding-top: 60px;'"
+  js:
+    - '//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js'
 ---
   {% include head.html %}
   <br/>
+  <script>
+  $(function() {
+    $('#bigun').fitText();
+  });
+  </script>
+  <h1 id='bigun' style='display: block;' class='text-center'>Home</h1>
   <div class='container'>
     <div class='row'>
       <div class='col-md-6'>
