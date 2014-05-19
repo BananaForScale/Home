@@ -32,4 +32,5 @@ var MAP_POIs = [
     {'name': 'Thatchspawn', 'x': 2.78, 'y': -1.12 },
     {'name': 'Carteret Islet', 'x': 0.23, 'y': 3.02 },
     {'name': 'The Almost Forgotten City', 'x': -0.09, 'y': 2.79 },
+    {'name': 'Bop', 'x': 1.87, 'y': 2.76 },
 ]
