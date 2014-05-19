@@ -398,7 +398,7 @@ function calcDistance(point1, point2) {
 }
 
 $(document).ready(function() {
-  $(document).bind('keyup', function(e) {
+  $(document).bind('keyup', function(e){
     if (e.keyCode == 27) {
       if (lastTimeout !== undefined) {
         clearTimeout(lastTimeout);
@@ -441,39 +441,6 @@ $(document).ready(function() {
     var newTileY = getTileY(mouseY, curry, newZoomlevel);
     setView(currx + oldTileX - newTileX, curry + oldTileY - newTileY, newZoomlevel);
     return false;
-  });
-  var lastAngle = 0;
-  var allowRotate = true;
-  $('#compass').mousedown(function(e) {
-    if (e.which == 1) {
-      thisAngle = lastAngle + 45;
-      if (allowRotate) {
-        compass = $('#compass');
-        base = $('#base');
-        allowRotate = false;
-        compass.addClass('animate');
-        compass.css({
-          '-moz-transform': 'rotate(' + thisAngle + 'deg)',
-          '-webkit-transform': 'rotate(' + thisAngle + 'deg)',
-          '-o-transform': 'rotate(' + thisAngle + 'deg)',
-          '-ms-transform': 'rotate(' + thisAngle + 'deg)'
-        });
-        base.addClass('animate');
-        base.css({
-          '-moz-transform': 'rotate(' + thisAngle + 'deg)',
-          '-webkit-transform': 'rotate(' + thisAngle + 'deg)',
-          '-o-transform': 'rotate(' + thisAngle + 'deg)',
-          '-ms-transform': 'rotate(' + thisAngle + 'deg)'
-        });
-        lastAngle = thisAngle;
-        setTimeout(function() {
-          compass.removeClass('animate');
-          base.removeClass('animate');
-          allowRotate = true;
-        }, 501)
-      }
-      return false;
-    }
   });
   $('#holder').mousedown(function(e) {
     if (e.which == 1) {
