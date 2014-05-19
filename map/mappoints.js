@@ -33,4 +33,7 @@ var MAP_POIs = [
     {'name': 'Carteret Islet', 'x': 0.23, 'y': 3.02 },
     {'name': 'The Almost Forgotten City', 'x': -0.09, 'y': 2.79 },
     {'name': 'Bop', 'x': 1.87, 'y': 2.76 },
+    {'name': 'Tam', 'x': 1.16, 'y': 3.06 },
+    {'name': 'Gull', 'x': 0.81, 'y':3.46 },
+    {'name': 'Fort Amundsen', 'x': 0.79, 'y': 2.76 },
 ]
