@@ -30,4 +30,6 @@ var MAP_POIs = [
     {'name': 'Shardrose', 'x': 0.97, 'y': 1.88 },
     {'name': 'Mod\'s Reach', 'x': 2.29, 'y': 2.43 },
     {'name': 'Thatchspawn', 'x': 2.78, 'y': -1.12 },
+    {'name': 'Carteret Islet', 'x': 0.23, 'y': 3.02 },
+    {'name': 'The Almost Forgotten City', 'x': -0.09, 'y': 2.79 },
 ]
