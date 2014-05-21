@@ -19,20 +19,14 @@ body {
 }
 
 #coords {
-  background-color: white;
-  color: black;
-  border: 1px solid gray;
-  opacity:0.8;
+  line-height: 1.42857143;
   position: absolute;
   bottom: 5px;
   left: 5px;
 }
 
 #distance {
-  background-color: white;
-  color: black;
-  border: 1px solid gray;
-  opacity:0.8;
+  line-height: 1.42857143;
   position: absolute;
   top: 75px;
   left: 5px;
