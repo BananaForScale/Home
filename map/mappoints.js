@@ -38,4 +38,5 @@ var MAP_POIs = [
     {'name': 'Fort Amundsen', 'x': 0.79, 'y': 2.76 },
     {'name': 'Dor', 'x': 2.61, 'y':3.19 },
     {'name': 'Hem', 'x': 3.08, 'y': 3.07 },
+    {'name': 'Varn', 'x': 4.34, 'y': 3.38 },
 ]
