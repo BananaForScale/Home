@@ -10,8 +10,9 @@
         {% for js in page.extra.js %}
         <script src='{{js}}'></script>
         {% endfor %}
+        <link href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css'/>
         <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'/>
-        <link href='//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css' rel='stylesheet'/>
+        <link href='{{site.baseurl}}/css/bootstrap.min.css' rel='stylesheet'/>
         <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet'/>
         {% for css in page.extra.css %}
         <link href='{{css}}' rel='stylesheet'/>
