@@ -4,7 +4,8 @@ extra:
   body:
     css: "style='padding-top: 60px;'"
   js:
-    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js'
+    - '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js'
+    - '//cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'
 ---
   {% include head.html %}
   <style>
@@ -26,7 +27,10 @@ extra:
         hash = CryptoJS.MD5(hash.toString());
         start = getRandomInt(0, 25);
         color = '#' + hash.toString().substring(start, start + 6);
-        $(selector).css('background-color', color);
+        //$(selector).css('background-color', color);
+        $(selector).animate({
+          backgroundColor: color
+        });
       }
     }
   }
