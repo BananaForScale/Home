@@ -9,9 +9,12 @@ extra:
   {% include head.html %}
   <style>
   .block {
+    display: inline-block;
     height: 128px;
     width: 128px;
-    padding: 3px;
+  }
+  .blockrow {
+    height: 131px;
   }
   </style>
   <script>
@@ -39,29 +42,29 @@ extra:
   </script>
   <br/>
   <div class='container text-center'>
-    <div>
-      <div id='00' class='block' style='display:inline-block;background-color:#000'></div>
-      <div id='01' class='block' style='display:inline-block;background-color:#111'></div>
-      <div id='02' class='block' style='display:inline-block;background-color:#222'></div>
-      <div id='03' class='block' style='display:inline-block;background-color:#333'></div>
+    <div class='blockrow'>
+      <div id='00' class='block' style='background-color:#000'></div>
+      <div id='01' class='block' style='background-color:#111'></div>
+      <div id='02' class='block' style='background-color:#222'></div>
+      <div id='03' class='block' style='background-color:#333'></div>
     </div>
-    <div>
-      <div id='10' class='block' style='display:inline-block;background-color:#444'></div>
-      <div id='11' class='block' style='display:inline-block;background-color:#555'></div>
-      <div id='12' class='block' style='display:inline-block;background-color:#666'></div>
-      <div id='13' class='block' style='display:inline-block;background-color:#777'></div>
+    <div class='blockrow'>
+      <div id='10' class='block' style='background-color:#444'></div>
+      <div id='11' class='block' style='background-color:#555'></div>
+      <div id='12' class='block' style='background-color:#666'></div>
+      <div id='13' class='block' style='background-color:#777'></div>
     </div>
-    <div>
-      <div id='20' class='block' style='display:inline-block;background-color:#888'></div>
-      <div id='21' class='block' style='display:inline-block;background-color:#999'></div>
-      <div id='22' class='block' style='display:inline-block;background-color:#aaa'></div>
-      <div id='23' class='block' style='display:inline-block;background-color:#bbb'></div>
+    <div class='blockrow'>
+      <div id='20' class='block' style='background-color:#888'></div>
+      <div id='21' class='block' style='background-color:#999'></div>
+      <div id='22' class='block' style='background-color:#aaa'></div>
+      <div id='23' class='block' style='background-color:#bbb'></div>
     </div>
-    <div>
-      <div id='30' class='block' style='display:inline-block;background-color:#ccc'></div>
-      <div id='31' class='block' style='display:inline-block;background-color:#ddd'></div>
-      <div id='32' class='block' style='display:inline-block;background-color:#eee'></div>
-      <div id='33' class='block' style='display:inline-block;background-color:#fff'></div>
+    <div class='blockrow'>
+      <div id='30' class='block' style='background-color:#ccc'></div>
+      <div id='31' class='block' style='background-color:#ddd'></div>
+      <div id='32' class='block' style='background-color:#eee'></div>
+      <div id='33' class='block' style='background-color:#fff'></div>
     </div>
   </div>
 {% include foot.html %}
