@@ -1,0 +1,67 @@
+---
+title: "Clock"
+extra:
+  body:
+    css: "style='padding-top: 60px;'"
+  js:
+    '//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js'
+---
+  {% include head.html %}
+  <style>
+  .block {
+    height: 128px;
+    width: 128px;
+    padding: 3px;
+  }
+  </style>
+  <script>
+  function updateClock() {
+    var hash = CryptoJS.MD5(new Date().toGMTString());
+    for (var x = 0; x < 4; x++) {
+      for (var y = 0; y < 4; y++) {
+        selector = '#' + x + '' + y;
+        hash = CryptoJS.MD5(hash.toString());
+        start = getRandomInt(0, 25);
+        color = '#' + hash.toString().substring(start, start + 6);
+        $(selector).css('background-color', color);
+      }
+    }
+  }
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  $(function() {
+    var hash = CryptoJS.MD5(new Date().toGMTString());
+    setInterval(function() {
+      updateClock();
+    }, 1000);
+  });
+  </script>
+  <br/>
+  <div class='container text-center'>
+    <div>
+      <div id='00' class='block' style='display:inline-block;background-color:#000'></div>
+      <div id='01' class='block' style='display:inline-block;background-color:#111'></div>
+      <div id='02' class='block' style='display:inline-block;background-color:#222'></div>
+      <div id='03' class='block' style='display:inline-block;background-color:#333'></div>
+    </div>
+    <div>
+      <div id='10' class='block' style='display:inline-block;background-color:#444'></div>
+      <div id='11' class='block' style='display:inline-block;background-color:#555'></div>
+      <div id='12' class='block' style='display:inline-block;background-color:#666'></div>
+      <div id='13' class='block' style='display:inline-block;background-color:#777'></div>
+    </div>
+    <div>
+      <div id='20' class='block' style='display:inline-block;background-color:#888'></div>
+      <div id='21' class='block' style='display:inline-block;background-color:#999'></div>
+      <div id='22' class='block' style='display:inline-block;background-color:#aaa'></div>
+      <div id='23' class='block' style='display:inline-block;background-color:#bbb'></div>
+    </div>
+    <div>
+      <div id='30' class='block' style='display:inline-block;background-color:#ccc'></div>
+      <div id='31' class='block' style='display:inline-block;background-color:#ddd'></div>
+      <div id='32' class='block' style='display:inline-block;background-color:#eee'></div>
+      <div id='33' class='block' style='display:inline-block;background-color:#fff'></div>
+    </div>
+  </div>
+{% include foot.html %}
