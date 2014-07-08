@@ -61,13 +61,13 @@
   </div>
   <div class='collapse navbar-collapse' id='nav-collapse'>
     <ul class='nav navbar-nav navbar-left'>
-      <li id='nav-view-map'><a href='{{site.baseurl}}/map'>View map</a></li>
       <li id='nav-setting'><a href='{{site.baseurl}}/setting'>Setting</a></li>
       <li id='nav-maps' class='dropdown'>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview Maps <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maps <b class="caret"></b></a>
         <ul class='dropdown-menu'>
-          <li id='nav-setting'><a href='{{site.baseurl}}/politics.jpg' target='_blank'>Political Map</a></li>
-          <li id='nav-setting'><a href='{{site.baseurl}}/full.jpg' target='_blank'>Overview Map</a></li>
+          <li id='nav-view-map'><a href='{{site.baseurl}}/map'>Interactive</a></li>
+          <li><a href='{{site.baseurl}}/politics.jpg' target='_blank'>World Political</a></li>
+          <li><a href='{{site.baseurl}}/full.jpg' target='_blank'>World Overview</a></li>
         </ul>
       </li>
       {% for nav in page.extra.nav.left %}
