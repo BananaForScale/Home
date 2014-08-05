@@ -43,4 +43,7 @@ var MAP_POIs = [
     {'name': 'Eod', 'x': 4.12, 'y': 1.71 },
     {'name': 'Plodston', 'x': 4.10, 'y': 0.84 },
     {'name': 'Cohac\'s Tower', 'x': 0.13, 'y': 0.30 },
+    {'name': 'Xork', 'x': 4.89, 'y': 1.65 },
+    {'name': 'Damort', 'x': 5.32, 'y': 1.71 },
+    {'name': 'Gostern', 'x': 5.39, 'y': 2.01 },
 ]
